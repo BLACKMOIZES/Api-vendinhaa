@@ -37,11 +37,11 @@ public class ProdutoController {
      * @param produtoRequestDto DTO que contém os dados do usuário a ser salvo.
      * @return DTO com as informações do usuário salvo, incluindo o ID gerado.
      */
-    @PostMapping("/produtos") // Define que este método lida com requisições HTTP POST.
-    public ProdutoResponseDto salvar(@RequestBody ProdutoRequestDto produtoRequestDto) {
-        // Chama o serviço para salvar o usuário e retorna a resposta.
-        return produtoService.save(produtoRequestDto);
-    }
+//    @PostMapping("/produtos") // Define que este método lida com requisições HTTP POST.
+//    public ProdutoResponseDto salvar(@RequestBody ProdutoRequestDto produtoRequestDto) {
+//        // Chama o serviço para salvar o usuário e retorna a resposta.
+//        return produtoService.save(produtoRequestDto);
+//    }
     @PutMapping("/produtos/{id}")
     public ProdutoResponseDto update(@PathVariable Long id,@RequestBody ProdutoRequestDto produtoRequestDto) {
         // Chama o serviço para salvar o usuário e retorna a resposta.

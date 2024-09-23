@@ -25,6 +25,10 @@ public class Produto {
     @Column(name = "preco")
     private Double preco;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     // Getters e Setters
     public Long getId() {
         return id;
@@ -57,4 +61,6 @@ public class Produto {
     public void setPreco(Double preco) {
         this.preco = preco;
     }
+
+
 }

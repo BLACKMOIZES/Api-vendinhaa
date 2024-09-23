@@ -3,6 +3,8 @@ package com.api_vendinha.api.domain.dtos.request;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * DTO para representar os dados necessários para criar ou atualizar um usuário.
  */
@@ -20,6 +22,8 @@ public class UserRequestDto {
     private String password;
     private Boolean is_activate;
     private String cpf_cnpj;
+    private String document;
+    private List<ProdutoRequestDto> produtoRequestDto;
 
     public String getName() {
         return name;

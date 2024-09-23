@@ -18,7 +18,6 @@ public class ProdutoServiceImpl implements ProdutoServiceInterface {
     public ProdutoServiceImpl(ProdutoRepository produtoRepository) {
         this.produtoRepository = produtoRepository;
     }
-
     /**
      * Salva um novo usuário ou atualiza um usuário existente.
      *
@@ -28,30 +27,30 @@ public class ProdutoServiceImpl implements ProdutoServiceInterface {
      * @param produtoRequestDto DTO contendo os dados do usuário a ser salvo ou atualizado.
      * @return DTO com as informações do usuário salvo, incluindo o ID gerado e o nome.
      */
-    @Override
-    public ProdutoResponseDto save(ProdutoRequestDto produtoRequestDto) {
-        // Cria uma nova instância de User.
-        Produto produto = new Produto();
-        // Define o nome do usuário a partir do DTO.
-        produto.setNome(produtoRequestDto.getNome());
-        produto.setQuantidade(produtoRequestDto.getQuantidade());
-        produto.setPreco(produtoRequestDto.getPreco());
-
-
-        // Salva o usuário no banco de dados e obtém a entidade persistida com o ID gerado.
-        Produto savedProduto = produtoRepository.save(produto);
-
-        // Cria um DTO de resposta com as informações do usuário salvo.
-        ProdutoResponseDto produtoResponseDto = new ProdutoResponseDto();
-        produtoResponseDto.setId(savedProduto.getId());
-        produtoResponseDto.setNome(savedProduto.getNome());
-        produtoResponseDto.setQuantidade(savedProduto.getQuantidade());
-        produtoResponseDto.setPreco(savedProduto.getPreco());
-
-
-        // Retorna o DTO com as informações do usuário salvo.
-        return produtoResponseDto;
-    }
+//    @Override
+//    public ProdutoResponseDto save(ProdutoRequestDto produtoRequestDto) {
+//        // Cria uma nova instância de User.
+//        Produto produto = new Produto();
+//        // Define o nome do usuário a partir do DTO.
+//        produto.setNome(produtoRequestDto.getNome());
+//        produto.setQuantidade(produtoRequestDto.getQuantidade());
+//        produto.setPreco(produtoRequestDto.getPreco());
+//
+//
+//        // Salva o usuário no banco de dados e obtém a entidade persistida com o ID gerado.
+//        Produto savedProduto = produtoRepository.save(produto);
+//
+//        // Cria um DTO de resposta com as informações do usuário salvo.
+//        ProdutoResponseDto produtoResponseDto = new ProdutoResponseDto();
+//        produtoResponseDto.setId(savedProduto.getId());
+//        produtoResponseDto.setNome(savedProduto.getNome());
+//        produtoResponseDto.setQuantidade(savedProduto.getQuantidade());
+//        produtoResponseDto.setPreco(savedProduto.getPreco());
+//
+//
+//        // Retorna o DTO com as informações do usuário salvo.
+//        return produtoResponseDto;
+//    }
 
     @Override
     public ProdutoResponseDto update(Long id, ProdutoRequestDto produtoRequestDto) {

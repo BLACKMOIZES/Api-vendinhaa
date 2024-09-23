@@ -19,7 +19,7 @@ public interface ProdutoServiceInterface {
      * @param produtoRequestDto DTO que contém os dados do usuário a ser salvo ou atualizado.
      * @return DTO com as informações do usuário salvo, incluindo o ID gerado e outros detalhes.
      */
-    ProdutoResponseDto save(ProdutoRequestDto produtoRequestDto);
+//    ProdutoResponseDto save(ProdutoRequestDto produtoRequestDto);
     ProdutoResponseDto update(Long id, ProdutoRequestDto produtoRequestDto);
     List<ProdutoResponseDto> findAll();
     ProdutoResponseDto findById(Long id);

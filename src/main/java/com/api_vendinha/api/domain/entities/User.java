@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * Entidade representando um usuário no sistema.
  *
@@ -46,6 +48,9 @@ public class User {
 
     @Column(name = "cpf_cnpj")
     private String cpf_cnpj;
+
+    @OneToMany(mappedBy = "user")
+    private List<Produto> produtos;
 
     public Long getId() {
         return id;
@@ -94,4 +99,5 @@ public class User {
     public void setCpf_cnpj(String cpf_cnpj) {
         this.cpf_cnpj = cpf_cnpj;
     }
+
 }
